@@ -202,6 +202,7 @@ class App extends Component {
         userId: authData.userId
       }),
     })
+    
       .then((res) => {
         return res.json();
       })
@@ -239,7 +240,7 @@ class App extends Component {
         count: authData.count
       }),
     })
-    
+
       .then((res) => {
         if (res.status === 401) {
           alert('보낼 수 있는 헌혈증이 없습니다')
