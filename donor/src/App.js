@@ -232,12 +232,14 @@ class App extends Component {
         Authorization: "Bearer " + this.state.token,
         "Content-Type": "application/json",
       },
+
       body: JSON.stringify({
         secondpassword: authData.password,
         receiver: authData.receiver,
         count: authData.count
       }),
     })
+    
       .then((res) => {
         if (res.status === 401) {
           alert('보낼 수 있는 헌혈증이 없습니다')
